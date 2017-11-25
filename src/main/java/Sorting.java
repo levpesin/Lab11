@@ -17,7 +17,7 @@ public class Sorting {
     private static final int SORT_INCREMENT = 10000;
 
     /** Total number of values to try. */
-    private static final int TOTAL_SORT_VALUES = 100;
+    private static final int TOTAL_SORT_VALUES = 20;
 
     /** Total data size. */
     private static final int TOTAL_INTEGER_VALUES = 1000000;
@@ -29,6 +29,16 @@ public class Sorting {
      * @return the sorted array, or null on failure
      */
     static int[] bubbleSort(final int[] array) {
+        boolean flag = true;
+        while (flag) {
+            flag = false;
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] < array[i - 1]) {
+                    array[i] = array[i - 1];
+                    flag = true;
+                }
+            }
+        }
         return null;
     }
 
